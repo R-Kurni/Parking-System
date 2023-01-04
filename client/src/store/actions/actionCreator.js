@@ -20,7 +20,7 @@ export const fetchParkings = () => {
 	};
 };
 
-export const createParking = (parkingInput) => {
+export const createParking = (userInput) => {
 	return async (dispatch) => {
 		try {
 			await fetch("http://localhost:3000/parkings", {
@@ -28,7 +28,7 @@ export const createParking = (parkingInput) => {
 				headers: {
 					"Content-Type": "application/json",
 				},
-				body: JSON.stringify(parkingInput),
+				body: JSON.stringify(userInput),
 			});
 			await dispatch(fetchParkings());
 		} catch (error) {
