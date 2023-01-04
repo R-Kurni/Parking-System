@@ -1,0 +1,26 @@
+[
+	{
+		"type": "Car",
+		"timeIn": "2023-01-04T10:25",
+		"timeOut": "2023-01-04T12:25",
+		"price": 10000
+	},
+	{
+		"type": "Motorcycle",
+		"timeIn": "2023-01-04T12:10",
+		"timeOut": "2023-01-04T15:30",
+		"price": 8000
+	},
+	{
+		"type": "Car",
+		"timeIn": "2023-01-04T12:05",
+		"timeOut": "2023-01-04T12:25",
+		"price": 5000
+	},
+	{
+		"type": "Motorcycle",
+		"timeIn": "2023-01-04T06:10",
+		"timeOut": "2023-01-04T15:30",
+		"price": 20000
+	}
+]

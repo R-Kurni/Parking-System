@@ -22,3 +22,62 @@
 .NavBar-Button:active {
 	color: black;
 }
+
+.Title {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 30px;
+}
+
+td,
+th {
+	text-align: center;
+}
+
+.card-align {
+	display: grid;
+	place-items: center;
+}
+
+.Center {
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.BTN-Content {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	gap: 20px;
+}
+
+.BTN-Cancel {
+	background-color: #eeeeee;
+	border-color: #999999;
+	color: #999999;
+	padding: 10px 70px;
+	border-radius: 5px;
+}
+
+.BTN-Cancel:hover {
+	background-color: #999999;
+	border-color: #444444;
+	color: #444444;
+}
+
+.BTN-Confirm {
+	background-color: #c3d6ff;
+	border-color: #3319c9;
+	color: #3319c9;
+	padding: 10px 70px;
+	border-radius: 5px;
+}
+
+.BTN-Confirm:hover {
+	background-color: #3319c9;
+	border-color: white;
+	color: white;
+}
