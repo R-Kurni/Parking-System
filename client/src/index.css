@@ -1,0 +1,24 @@
+.center-navbar {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+	height: 50px;
+}
+
+.NavBar {
+	background-color: #eeeeee;
+	height: 50px;
+}
+
+.NavBar-Button {
+	color: #bcbcbc;
+}
+
+.NavBar-Button:hover {
+	color: black;
+}
+
+.NavBar-Button:active {
+	color: black;
+}
