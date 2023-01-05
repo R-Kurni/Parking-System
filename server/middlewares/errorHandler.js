@@ -7,7 +7,7 @@ const errorHandler = (err, req, res, next) => {
 		code = 400;
 		message = errMsg[0];
 	} else if (err.name === "Invalid Input") {
-		code = 404;
+		code = 400;
 		message = "Invalid Input";
 	}
 	res.status(code).json({ message });
