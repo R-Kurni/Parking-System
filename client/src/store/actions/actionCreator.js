@@ -1,4 +1,5 @@
 import FETCH_PARKINGS_SUCCESS from "./actionType";
+import axios from "axios";
 
 export const fetchParkingsSuccess = (data) => {
 	return {
@@ -7,11 +8,24 @@ export const fetchParkingsSuccess = (data) => {
 	};
 };
 
-export const fetchParkings = () => {
+export const fetchParkings = (userInput) => {
 	return async (dispatch) => {
 		try {
-			const res = await fetch("http://localhost:3000/parkings");
-			const data = await res.json();
+			const options = {
+				method: "GET",
+				url: "http://localhost:3000/parkings",
+			};
+			console.log(userInput);
+			if (typeof userInput !== "undefined") {
+				options.params = {
+					type: userInput.type,
+					timeInS: userInput.timeInS,
+					timeInE: userInput.timeInE,
+					priceS: userInput.priceS,
+					priceE: userInput.priceE,
+				};
+			}
+			const { data } = await axios(options);
 			console.log(data);
 			dispatch(fetchParkingsSuccess(data));
 		} catch (error) {
@@ -23,12 +37,14 @@ export const fetchParkings = () => {
 export const createParking = (userInput) => {
 	return async (dispatch) => {
 		try {
-			await fetch("http://localhost:3000/parkings", {
+			await axios({
 				method: "POST",
-				headers: {
-					"Content-Type": "application/json",
+				url: "http://localhost:3000/parkings",
+				data: {
+					type: userInput.type,
+					timeIn: userInput.timeIn,
+					timeOut: userInput.timeOut,
 				},
-				body: JSON.stringify(userInput),
 			});
 			await dispatch(fetchParkings());
 		} catch (error) {
